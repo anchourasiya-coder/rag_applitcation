@@ -61,4 +61,9 @@ ______________________________________________________________
 
 _______________________
 
-//  modul nameing convesrion & funs also ,  qdrant db local (2), more about chunking (3) , fe & be auth layer (4) (basic auth) admin auth ,(5) go though onsource code of any py app.
+//  modul nameing convesrion & funs also (done),  qdrant db local (done), more about chunking (3) ,  (basic auth) for admin route(done) ,(5) go though onsource code of any py app.
+// check the moules is loosly cuppoled or not because we have to use this for pdfs later on
+
+
+this -> ectract content from pdf -> do chunking of that -> convert ointp embeds -> push it into db 
+search is same 

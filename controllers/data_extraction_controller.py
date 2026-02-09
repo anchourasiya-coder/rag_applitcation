@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from services.queryExtraction.queryHandler import perform_rag_extraction
+from services.queryExtraction.query_handler import perform_rag_extraction
 
 async def process_query_request(request_data):
     try:

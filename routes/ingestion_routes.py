@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from controllers.adminDataLoader import submit_sitemap # The Controller
+from controllers.Ingestion_controller import submit_sitemap # The Controller
 from pydantic import BaseModel
 
 class SitemapRequest(BaseModel):

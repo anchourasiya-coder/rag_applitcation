@@ -1,7 +1,7 @@
 # import uuid
 # from pinecone import Pinecone
 
-# def dump_embeds_to_pinecone(index_name,text_chunks, embeddings, namespace="default"):
+# def data_insertion(index_name,text_chunks, embeddings, namespace="default"):
 #     """
 #     Batches and pushes text chunks and their embeddings to Pinecone.
 #     """
@@ -37,7 +37,7 @@ import uuid
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 
-def dump_embeds_to_pinecone(collection_name, text_chunks, embeddings):
+def data_insertion(collection_name, text_chunks, embeddings):
     """
     Batches and pushes text chunks and their embeddings to Qdrant Cloud.
     """

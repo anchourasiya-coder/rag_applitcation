@@ -2,7 +2,7 @@
 # from pydantic import BaseModel
 # import ollama
 # from pinecone import Pinecone
-# from services.adminDataIngestion.embedsConverter import generate_embeddings
+# from services.adminDataIngestion.chunk_to_embeds_converter import generate_embeddings
 
 # router = APIRouter()
 
@@ -67,7 +67,7 @@
 
 import ollama
 from qdrant_client import QdrantClient
-from services.adminDataIngestion.embedsConverter import generate_embeddings
+from services.DataIngestion.chunk_to_embeds_converter import generate_embeddings
 
 # Credentials from your Qdrant Dashboard
 QDRANT_URL = "https://e3ff098b-4faf-4361-8b9b-14e7f172eda3.us-east4-0.gcp.cloud.qdrant.io:6333"

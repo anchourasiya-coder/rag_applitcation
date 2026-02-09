@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from controllers.dataExtractionController import process_query_request
+from controllers.data_extraction_controller import process_query_request
 from pydantic import BaseModel
 
 router = APIRouter(prefix="/query", tags=["Retrieval"])

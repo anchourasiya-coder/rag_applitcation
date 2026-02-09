@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def scrape_sitemap_articles(data_list: list):
+def scrape_sitemap_data(data_list: list):
     """
     Scrapes the entire visible content of pages from a list of URLs.
     """
