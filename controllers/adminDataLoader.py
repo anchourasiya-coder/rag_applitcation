@@ -33,7 +33,7 @@ async def submit_sitemap(data: SitemapRequest):
 
     embeds=generate_embeddings(chunk_data)
 
-    dump_embeds_to_pinecone("my-rag-index",chunk_data,embeds)
+    dump_embeds_to_pinecone("my_rag_data",chunk_data,embeds)
     return {
         "message": "Sitemap URL received",
         "xml_preview": xml[:500],
