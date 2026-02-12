@@ -1,11 +1,11 @@
 from fastapi import HTTPException
-from services.queryExtraction.queryHandler import perform_rag_extraction
+from services.queryExtraction.query_handler import perform_rag_extraction
 
 async def process_query_request(request_data):
     try:
         # Controller calls the service to get the final answer
-        # result = await perform_rag_extraction(request_data.question,request_data.namespace)
-        result = await perform_rag_extraction(request_data)
+        result = await perform_rag_extraction(request_data.question)
+        # result = await perform_rag_extraction(request_data)
         return result
         
     except Exception as e:

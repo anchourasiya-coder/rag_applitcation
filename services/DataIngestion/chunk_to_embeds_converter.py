@@ -9,8 +9,8 @@ def generate_embeddings(chunks: list[str]):
 
     # Using the 'embed' method for batch processing
     response = ollama.embed(
-        model='mxbai-embed-large',
-        # model='rjmalagon/gte-qwen2-1.5b-instruct-embed-f16',
+        # model='mxbai-embed-large',
+        model='rjmalagon/gte-qwen2-1.5b-instruct-embed-f16',
         input=chunks
     )
     
