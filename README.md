@@ -59,6 +59,8 @@ ______________________________________________________________
 
 //langicain diff chuking types      ( https://youtu.be/pIGRwMjhMaQ?si=IR8dPQgFwCpw56wT) (done)
 
-_______________________
+_______________________________________
 
-//  modul nameing convesrion & funs also ,  qdrant db local, more about chunking ,  (basic auth) for admin , go though onsource code of any py app.
+//   qdrant db local(spent some time on this (2) & spent some time of fast api application opensoure),  (basic auth) for admin (1), env , git 
+
+-> infra (module)-> collelction

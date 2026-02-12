@@ -1,5 +1,5 @@
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
 # from services.adminDataIngestion.adminDataLoader import router as ingest_router
@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routes.ingestion_routes import router as ingest_router
 from routes.query_extraction_routes import router as query_router
+from core.loginAuth import login, LoginRequest, LoginResponse
 app = FastAPI(title="RAG Backend MVC")
 
 # Include the routers you defined in the routes/ folder
@@ -25,3 +26,8 @@ app.add_middleware(
 @app.get("/")
 def health_check():
     return {"status": "RAG backend running!"}
+
+@app.post("/login")
+async def admin_login(credentials: LoginRequest) -> LoginResponse:
+  
+    return login(credentials)

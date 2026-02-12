@@ -32,20 +32,22 @@
         
 #     print(f"Successfully dumped {len(records)} embeddings to Pinecone.")
 
-
+import os 
 import uuid
+from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
+
+load_dotenv()  # Load environment variables from .env file
 
 def data_insertion(collection_name, text_chunks, embeddings):
     """
     Batches and pushes text chunks and their embeddings to Qdrant Cloud.
     """
     # 1. Initialize Qdrant Cloud Client
-    # Replace with your actual credentials from your cluster dashboard
-    QDRANT_URL = "https://e3ff098b-4faf-4361-8b9b-14e7f172eda3.us-east4-0.gcp.cloud.qdrant.io:6333"
-    QDRANT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.uNsMb87G1k4ovuOnaTppWITzHTwgivs3gtGNt9umDXI"
-    
+    QDRANT_URL = os.getenv("QDRANT_URL")
+    QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+
     client = QdrantClient(
         url=QDRANT_URL,
         api_key=QDRANT_API_KEY

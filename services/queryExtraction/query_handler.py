@@ -64,14 +64,18 @@
 #     except Exception as e:
 #         raise HTTPException(status_code=500, detail=str(e))
 
-
+import os
 import ollama
+from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 from services.DataIngestion.chunk_to_embeds_converter import generate_embeddings
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Credentials from your Qdrant Dashboard
-QDRANT_URL = "https://e3ff098b-4faf-4361-8b9b-14e7f172eda3.us-east4-0.gcp.cloud.qdrant.io:6333"
-QDRANT_API_KEY ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.uNsMb87G1k4ovuOnaTppWITzHTwgivs3gtGNt9umDXI"
+QDRANT_URL = os.getenv("QDRANT_URL")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 COLLECTION_NAME = "my_rag_data"
 
 async def perform_rag_extraction(question: str):
